@@ -13,6 +13,43 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+#Routing Sederhana
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+// Route::get('/hello', function() {
+//     return 'Hello World';
+// });
+
+// Route::get('/world', function () {
+//     return 'World';
+// });
+ 
+// Route::get('/welcome', function() {
+//     return 'Selamat Datang!';
+// });
+
+// Route::get('/nim', function() {
+//     return '234176004';
+// });
+
+// Route::get('/user/{name}', function ($name) {
+//     return 'Nama saya adalah '.$name;
+// });
+
+// Route::get('/posts/{post}/comments/{comment}', function ($postId, $commentId) {
+//     return 'Pos ke-'.$postId." Komentar Ke-: ".$commentId;
+// });
+
+// Route::get('/articles/{id}', function($artId) {
+//     return 'Artikel ID Ke-'.$artId;
+// });
+
+
+
+#Optional Parameter
+Route::get('/user/{name?}', function ($name=null) {
+    return 'Nama saya adalah '.$name;
 });
+
